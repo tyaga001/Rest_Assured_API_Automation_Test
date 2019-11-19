@@ -6,12 +6,45 @@
     <groupId>com.api.test.automation</groupId>
     <artifactId>com.api.test.automation</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <description>Code samples used in the REST Assured Automation Test demo </description>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <restassured.version>3.3.0</restassured.version>
+        <junit.version>4.12</junit.version>
+        <junit.dataprovider.version>2.4</junit.dataprovider.version>
+        <jackson.databind.version>2.9.8</jackson.databind.version>
+    </properties>
     <dependencies>
         <!--Test API Automation Dependencies-->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>3.3.0</version>
+            <version>${restassured.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tngtech.junit.dataprovider</groupId>
+            <artifactId>junit4-dataprovider</artifactId>
+            <version>${junit.dataprovider.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-jre8</artifactId>
+            <version>2.21.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
